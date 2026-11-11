@@ -1,0 +1,69 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.app-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+[data-theme='dark'] body {
+  background: #101817;
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .app-shell {
+  background: #101817;
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .bg-slate-100 {
+  background-color: #101817 !important;
+}
+
+[data-theme='dark'] .bg-white {
+  background-color: #192523 !important;
+}
+
+[data-theme='dark'] .bg-slate-50 {
+  background-color: #14211f !important;
+}
+
+[data-theme='dark'] .bg-slate-200 {
+  background-color: #2a3936 !important;
+}
+
+[data-theme='dark'] .text-slate-900,
+[data-theme='dark'] .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .text-slate-700,
+[data-theme='dark'] .text-slate-600 {
+  color: #cbd5d1 !important;
+}
+
+[data-theme='dark'] .text-slate-500 {
+  color: #9aa9a4 !important;
+}
+
+[data-theme='dark'] .border-slate-200,
+[data-theme='dark'] .border-slate-300 {
+  border-color: #344540 !important;
+}
+
+[data-theme='dark'] .bg-sky-50 {
+  background-color: #172c32 !important;
+}
+
+[data-theme='dark'] .border-dashed {
+  border-color: #465651 !important;
+}
+
+[data-theme='dark'] input,
+[data-theme='dark'] select {
+  color-scheme: dark;
+}

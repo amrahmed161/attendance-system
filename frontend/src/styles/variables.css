@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --app-bg: #f8fafc;
+  --app-surface: #ffffff;
+  --app-surface-alt: #f1f5f9;
+  --app-border: #e2e8f0;
+  --app-text: #0f172a;
+  --app-muted: #475569;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --danger: #dc2626;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  background: #101817;
+}

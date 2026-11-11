@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-
     public function login(Request $request)
     {
         $validated = $request->validate([
@@ -17,9 +16,15 @@ class AuthController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        $user = User::where('name', $validated['name'])->first();
+        $user = User::where('name', $validated['name'])
+            ->orWhere('email', $validated['name'])
+            ->first();
 
-        if (! $user || ! Hash::check($validated['password'], $user->password)) {
+        if (
+            ! $user
+            || $user->role !== 'manager'
+            || ! Hash::check($validated['password'], $user->password)
+        ) {
             return response()->json([
                 'message' => 'Invalid credentials.',
             ], 401);
@@ -34,6 +39,8 @@ class AuthController extends Controller
             'user' => [
                 'id' => $user->id,
                 'name' => $user->name,
+                'email' => $user->email,
+                'role' => $user->role,
             ],
         ], 200);
     }
